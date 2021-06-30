@@ -19,6 +19,10 @@
   ],
   "author": "Peter Lee",
   "license": "MulanPSL2",
+  "bugs": {
+    "url": "https://github.com/originjs/vue-sfc-ast-parser/issues"
+  },
+  "homepage": "https://github.com/originjs/vue-sfc-ast-parser",
   "dependencies": {
     "@babel/types": "^7.12.12",
     "@types/jscodeshift": "^0.7.1",

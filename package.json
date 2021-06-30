@@ -1,0 +1,38 @@
+{
+  "name": "@originjs/vue-sfc-ast-parser",
+  "version": "1.0.0",
+  "description": "A ast parser for vue sfc",
+  "main": "index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest"
+  },
+  "keywords": [
+    "vue",
+    "sfc",
+    "ast",
+    "parser"
+  ],
+  "author": "Peter Lee",
+  "license": "MulanPSL2",
+  "dependencies": {
+    "@babel/types": "^7.12.12",
+    "@types/jscodeshift": "^0.7.1",
+    "@vue/compiler-core": "^3.0.5",
+    "@vue/compiler-dom": "^3.0.5",
+    "jscodeshift": "^0.11.0",
+    "source-map": "^0.6.1",
+    "vue-eslint-parser": "^7.6.0"
+  },
+  "devDependencies": {
+    "@types/eslint-scope": "^3.7.0",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.12.47",
+    "jest": "^27.0.3",
+    "ts-jest": "^27.0.3"
+  }
+}

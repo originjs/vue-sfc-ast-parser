@@ -26,7 +26,16 @@ export default function vueSfcAstParse(
     descriptor = parseSFC(source, { filename: path }).descriptor
 
     const templateAST : ESLintProgram | null = parseTemplate(descriptor)
-    const { scriptAST, jscodeshiftParser } = parseScript(descriptor)
+    const parseScriptResult = parseScript(descriptor)
+    let scriptAST
+    let jscodeshiftParser
+    if (!parseScriptResult) {
+        scriptAST = null
+        jscodeshiftParser = null
+    } else {
+        scriptAST = parseScriptResult.scriptAST
+        jscodeshiftParser = parseScriptResult.jscodeshiftParser
+    }
 
     return {
         templateAST : templateAST,

@@ -159,7 +159,7 @@ export interface SFCParseResult {
 }
 
 const SFC_CACHE_MAX_SIZE = 500
-const sourceToSFC = new (require('lru-cache'))(SFC_CACHE_MAX_SIZE) as Map<
+const sourceToSFC = new (require('lru-cache'))({max: SFC_CACHE_MAX_SIZE}) as Map<
     string,
     SFCParseResult
     >
